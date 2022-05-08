@@ -25,7 +25,6 @@ const ItemDetail = () => {
   return (
     <>
       <div
-        className="hero min-h-screen bg-base-200"
         style={{
           border: "2px solid rgb(122 5 44)",
           margin: "5rem",
@@ -33,32 +32,31 @@ const ItemDetail = () => {
           textShadow: "0 0 3px #FF0000",
         }}
       >
-        <div className="hero-content flex-col lg:flex-row-reverse">
+        <div>
           <img
             src={item.pictureUrl1}
             className="max-w-sm rounded-lg shadow-2xl"
             alt="instrumento"
           />
           <div>
-            <h1 className="text-5xl font-bold">
+            <h1>
               <strong>
                 {item.instrument} {item.brand}
               </strong>
-              <p className="text-4xl">{item.model}</p>
+              {item.model}
             </h1>
-            <p className="py-6">
-              {item.description}
+
+            {item.description}
+            <br />
+            <br />
+            <ul className="list-disc">
+              <p className="text-xl">CARACTERÍSTICAS</p>
               <br />
-              <br />
-              <ul className="list-disc">
-                <p className="text-xl">CARACTERÍSTICAS</p>
-                <br />
-                <li>{item.caracteristica1}</li>
-                <li>{item.caracteristica2}</li>
-                <li>{item.caracteristica3}</li>
-                <li>{item.caracteristica4}</li>
-              </ul>
-            </p>
+              <li>{item.caracteristica1}</li>
+              <li>{item.caracteristica2}</li>
+              <li>{item.caracteristica3}</li>
+              <li>{item.caracteristica4}</li>
+            </ul>
             <button className="btn btn-primary">COMPRAR</button>
           </div>
         </div>

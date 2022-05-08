@@ -22,11 +22,9 @@ const ItemCard = ({ data }) => {
           {data.brand}
         </Card.Title>
         <Card.Text>
-          <p>
-            {data.model}
-            <br />
-            Precio: {data.price}
-          </p>
+          {data.model}
+          <br />
+          Precio: {data.price}
         </Card.Text>
         <Link to={`/productos/${data.id}`}>
           <Button variant="primary">Mas info</Button>

@@ -1,26 +1,32 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { itemsData } from "../data/itemsData.js";
 import ItemCard from "./ItemCard.jsx";
+import ItemDetail from "./ItemDetail.jsx";
 
-const ItemListContainer = () => {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    const getItems = new Promise((resolve, reject) => {
-      setTimeout(() => {
+function getItems(instrumentId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (instrumentId !== undefined) {
+        const arrayFiltered = itemsData.filter((item) => {
+          return item.instrument === instrumentId;
+        });
+        resolve(arrayFiltered);
+      } else {
         resolve(itemsData);
-      }, 2000);
+      }
+    }, 700);
+  });
+}
+function ItemListContainer() {
+  const [items, setItems] = useState([]);
+  const { instrumentId } = useParams();
+  useEffect(() => {
+    getItems(instrumentId).then((result) => {
+      setItems(result);
     });
-    getItems
-      .then((result) => {
-        console.log("Se completo la promesa", result);
-        setItems(result);
-      })
-      .catch((err) => {
-        console.log("Hubo un error", err);
-      });
-  }, []);
+  }, [instrumentId]);
 
   return (
     <div className="d-flex" style={{ marginTop: "90px", marginLeft: "236px" }}>
@@ -29,6 +35,6 @@ const ItemListContainer = () => {
       ))}
     </div>
   );
-};
+}
 
 export { ItemListContainer };

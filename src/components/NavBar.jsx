@@ -10,7 +10,7 @@ const NavBar = () => {
       <Navbar bg="light" expand="lg">
         <Container>
           <Link to="/">
-            <Navbar.Brand className="me-5" href="#home">
+            <Navbar.Brand className="me-5">
               <img
                 className="h-6"
                 style={{ width: "35px" }}
@@ -23,18 +23,10 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Link to="/">
-                <Nav.Link href="#home">Home</Nav.Link>
-              </Link>
-              <Link to="/productos">
-                <Nav.Link href="#link">Instrumentos</Nav.Link>
-              </Link>
-              <Link to="/instrumento/guitarra">
-                <Nav.Link href="#link">Guitarra</Nav.Link>
-              </Link>
-              <Link to="/instrumento/bajo">
-                <Nav.Link href="#link">Bajo</Nav.Link>
-              </Link>
+              <Link to="/">Home</Link>
+              <Link to="/productos">Instrumentos</Link>
+              <Link to="/instrument/guitarra">Guitarra</Link>
+              <Link to="/instrument/bajo">Bajo</Link>
               <NavDropdown title="Accesorios" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
