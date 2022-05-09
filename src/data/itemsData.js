@@ -9,7 +9,7 @@ import AmericanUltra from "../img/basses/AmericanUltra.jpg";
 export const itemsData = [
   {
     id: 1,
-    instrument: "Guitarra ",
+    instrument: "Guitarra",
     brand: "Fender",
     model: "American Professional II Stratocaster",
     price: 20000,
@@ -34,7 +34,7 @@ export const itemsData = [
   },
   {
     id: 2,
-    instrument: "Guitarra  ",
+    instrument: "Guitarra",
     brand: "Fender",
     model: "American Ultra Telecaster",
     price: 30000,
@@ -66,7 +66,7 @@ export const itemsData = [
   },
   {
     id: 3,
-    instrument: "Guitarra ",
+    instrument: "Guitarra",
     brand: "Fender",
     model: "Curt Cobain Jaguar HH ST",
     price: 20000,
@@ -91,7 +91,7 @@ export const itemsData = [
   },
   {
     id: 4,
-    instrument: "Bajo ",
+    instrument: "Bajo",
     brand: "Fender",
     model: "American Performer Jazz Bass",
     price: 20000,
@@ -106,7 +106,7 @@ export const itemsData = [
   },
   {
     id: 5,
-    instrument: "Bajo ",
+    instrument: "Bajo",
     brand: "Fender",
     model: "American Ultra Precision Jazz Bass",
     price: 20000,

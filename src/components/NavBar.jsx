@@ -9,8 +9,11 @@ const NavBar = () => {
       {" "}
       <Navbar bg="light" expand="lg">
         <Container>
-          <Link to="/">
-            <Navbar.Brand className="me-5">
+          <Link to="/productos" style={{ textDecoration: "none" }}>
+            <Navbar.Brand
+              className="me-5"
+              style={{ marginLeft: "-15rem", textDecoration: "none" }}
+            >
               <img
                 className="h-6"
                 style={{ width: "35px" }}
@@ -23,10 +26,45 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Link to="/">Home</Link>
-              <Link to="/productos">Instrumentos</Link>
-              <Link to="/instrument/guitarra">Guitarra</Link>
-              <Link to="/instrument/bajo">Bajo</Link>
+              <Link
+                to="/productos"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  textAlign: "center",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "0.5rem",
+                }}
+              >
+                Home
+              </Link>
+              <Link
+                to="/instrument/Guitarra"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  textAlign: "center",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "0.5rem",
+                }}
+              >
+                Guitarra
+              </Link>
+              <Link
+                to="/instrument/Bajo"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  textAlign: "center",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "0.5rem",
+                }}
+              >
+                Bajo
+              </Link>
               <NavDropdown title="Accesorios" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -40,7 +78,10 @@ const NavBar = () => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
-              <Button href="#">
+              <Button
+                href="#"
+                style={{ marginLeft: "5rem", marginRight: "-15rem" }}
+              >
                 <CartWidget />
               </Button>{" "}
             </Nav>
