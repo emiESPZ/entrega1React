@@ -4,7 +4,6 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { ItemListContainer } from "./components/ItemListContainer";
 import ItemDetail from "./components/ItemDetail";
-import Home from "./components/Home";
 
 function App() {
   //Aquí ira la logica
@@ -23,7 +22,7 @@ function App() {
             path="/instrument/:instrumentId"
             element={<ItemListContainer />}
           />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ItemListContainer />} />
         </Routes>
       </BrowserRouter>
     </>
