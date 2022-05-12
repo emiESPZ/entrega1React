@@ -2,8 +2,12 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown, Button } from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import useCartContext from "../store/CartContext";
 
 const NavBar = () => {
+  const { contextFunction } = useCartContext();
+  contextFunction();
   return (
     <>
       {" "}

@@ -2,6 +2,8 @@ import AmericanStrat from "../img/guitars/AmericanStrat.jpg";
 import AmericanStratBack from "../img/guitars/AmericanStratBack.jpg";
 import AmericanStratBody from "../img/guitars/AmericanStratBody.jpg";
 import AmericanTele from "../img/guitars/AmericanTele.jpg";
+import AmericanTeleBack from "../img/guitars/AmericanTeleBack.jpg";
+import AmericanTeleBody from "../img/guitars/AmericanTeleBody.jpg";
 import CCobainJaguar from "../img/guitars/CCobainJaguar.jpg";
 import AmericanPerformer from "../img/basses/AmericanPerformer.jpg";
 import AmericanUltra from "../img/basses/AmericanUltra.jpg";
@@ -39,6 +41,8 @@ export const itemsData = [
     model: "American Ultra Telecaster",
     price: 30000,
     pictureUrl1: AmericanTele,
+    pictureUrl2: AmericanTeleBack,
+    pictureUrl3: AmericanTeleBody,
     description: `American Ultra es nuestra serie más avanzada de guitarras y bajos
     para músicos exigentes que exigen lo último en precisión,
     rendimiento y tono. La American Ultra Telecaster presenta un

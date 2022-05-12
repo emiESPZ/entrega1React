@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { itemsData } from "../data/itemsData";
+import { Image } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import Counter from "./Counter";
+import useCartContext from "../store/CartContext";
 
 const ItemDetail = () => {
   const { itemId } = useParams();
   const [item, setItem] = useState({});
+  const { addToCart } = useCartContext();
 
   useEffect(() => {
     (async () => {
@@ -20,6 +25,11 @@ const ItemDetail = () => {
         resolve(itemsData.find((i) => i.id == itemId));
       }, 1000);
     });
+  };
+
+  const onAdd = (count) => {
+    addToCart(item, count);
+    console.log("Agregado al Cart", count);
   };
 
   return (
@@ -45,8 +55,10 @@ const ItemDetail = () => {
               </strong>
               {item.model}
             </h1>
+            <p style={{ marginRight: "40rem", textAlign: "justify" }}>
+              {item.description}
+            </p>
 
-            {item.description}
             <br />
             <br />
             <ul className="list-disc">
@@ -57,7 +69,10 @@ const ItemDetail = () => {
               <li>{item.caracteristica3}</li>
               <li>{item.caracteristica4}</li>
             </ul>
-            <button className="btn btn-primary">COMPRAR</button>
+            <Button onClick={() => onAdd(item)} className="btn btn-primary">
+              COMPRAR
+            </Button>
+            <Counter />
           </div>
         </div>
       </div>
