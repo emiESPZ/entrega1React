@@ -33,6 +33,7 @@ export const itemsData = [
     nuez de hueso; 22 trastes estrechos y altos para doblar fácilmente"`,
     caracteristica4:
       "Diapasón de radio compuesto de 10”-14”; 22 trastes jumbo medio",
+    stock: 5,
   },
   {
     id: 2,
@@ -67,6 +68,7 @@ export const itemsData = [
       "Mástil en forma de “D moderna” con acabado ultra satinado",
     caracteristica4:
       "Diapasón de radio compuesto de 10”-14”; 22 trastes jumbo medio",
+    stock: 2,
   },
   {
     id: 3,
@@ -92,6 +94,7 @@ export const itemsData = [
     caracteristica3: `Tres perillas de control estriadas de "cúpula cromada" (volumen, volumen, tono)`,
     caracteristica4: `Puente de cromo negro Adjusto-Matic™ y cordal de trémolo flotante con botón de bloqueo
       Modelos para diestros y zurdos`,
+    stock: 3,
   },
   {
     id: 4,
@@ -107,6 +110,7 @@ export const itemsData = [
     caracteristica3: "Sistema de tonos Greasebucket",
     caracteristica4:
       "Mástil en forma de “C moderna” con diapasón de 9,5” de radio",
+    stock: 3,
   },
   {
     id: 5,
@@ -130,5 +134,6 @@ export const itemsData = [
     caracteristica3: `Perfil de cuello en forma de "D moderna"`,
     caracteristica4:
       "Diapasón de radio compuesto de 10”-14”; 21 trastes jumbo medio",
+    stock: 1,
   },
 ];
