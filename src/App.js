@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { ItemListContainer } from "./components/ItemListContainer";
 import ItemDetail from "./components/ItemDetail";
 import { CartContextProvider } from "../src/store/CartContext";
+import CartView from "./components/CartView";
 
 function App() {
   //Aquí ira la logica
@@ -25,6 +26,7 @@ function App() {
               element={<ItemListContainer />}
             />
             <Route path="/" element={<ItemListContainer />} />
+            <Route path="/cart" element={<CartView />} />
           </Routes>
         </BrowserRouter>
       </CartContextProvider>

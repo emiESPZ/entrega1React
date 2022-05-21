@@ -83,11 +83,11 @@ const NavBar = () => {
                 </NavDropdown.Item>
               </NavDropdown>
               <Button
-                href="#"
+                href="/cart"
                 style={{ marginLeft: "5rem", marginRight: "-15rem" }}
               >
                 <CartWidget />
-              </Button>{" "}
+              </Button>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,31 +1,38 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { itemsData } from "../data/itemsData.js";
+import { getAllItems as getItems, getItemsByCategory } from "../data/firebase";
+// import { itemsData } from "../data/itemsData.js";
 import ItemCard from "./ItemCard.jsx";
 import ItemDetail from "./ItemDetail.jsx";
 
-function getItems(instrumentId) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (instrumentId !== undefined) {
-        const arrayFiltered = itemsData.filter((item) => {
-          return item.instrument === instrumentId;
-        });
-        resolve(arrayFiltered);
-      } else {
-        resolve(itemsData);
-      }
-    }, 700);
-  });
-}
+// function getItems(instrumentId) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (instrumentId !== undefined) {
+//         const arrayFiltered = itemsData.filter((item) => {
+//           return item.instrument === instrumentId;
+//         });
+//         resolve(arrayFiltered);
+//       } else {
+//         resolve(itemsData);
+//       }
+//     }, 700);
+//   });
+// }
 function ItemListContainer() {
   const [items, setItems] = useState([]);
   const { instrumentId } = useParams();
   useEffect(() => {
-    getItems(instrumentId).then((result) => {
-      setItems(result);
-    });
+    if (instrumentId === undefined) {
+      getItems().then((result) => {
+        setItems(result);
+      });
+    } else {
+      getItemsByCategory(instrumentId).then((result) => {
+        setItems(result);
+      });
+    }
   }, [instrumentId]);
 
   return (
