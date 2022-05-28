@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { getAllItems as getItems, getItemsByCategory } from "../data/firebase";
 // import { itemsData } from "../data/itemsData.js";
 import ItemCard from "./ItemCard.jsx";
-import ItemDetail from "./ItemDetail.jsx";
 
 // function getItems(instrumentId) {
 //   return new Promise((resolve, reject) => {
@@ -36,7 +35,10 @@ function ItemListContainer() {
   }, [instrumentId]);
 
   return (
-    <div className="d-flex" style={{ marginTop: "90px", marginLeft: "236px" }}>
+    <div
+      className="d-flex"
+      style={{ marginTop: "90px", paddingLeft: "5rem", paddingRight: "5rem" }}
+    >
       {items.map((item) => (
         <ItemCard key={item.id} data={item} />
       ))}

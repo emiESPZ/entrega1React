@@ -8,6 +8,9 @@ import {
   collection,
   getdocs,
   getDocs,
+  setDoc,
+  Timestamp,
+  addDoc,
 } from "firebase/firestore/lite";
 
 const firebaseConfig = {
@@ -53,4 +56,14 @@ export async function getItem(id) {
   const instrumentSnap = await getDoc(docRef);
 
   return { ...instrumentSnap.data(), id: instrumentSnap.id };
+}
+
+export async function createBuyOrder(orderData) {
+  const buyTimestamp = Timestamp.now();
+  const orderWithDate = { ...orderData, date: buyTimestamp };
+
+  const miColec = collection(firestoreDB, "buyOrders");
+  const orderDoc = await addDoc(miColec, orderWithDate);
+  return;
+  console.log("Orden lista:", orderDoc.id);
 }

@@ -69,8 +69,25 @@ const NavBar = () => {
               >
                 Bajo
               </Link>
+              <Link
+                to="/instrument/Teclado"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  textAlign: "center",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "0.5rem",
+                }}
+              >
+                Teclado
+              </Link>
               <NavDropdown title="Accesorios" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <Link to="/instrument/Afinador">
+                  <NavDropdown.Item href="#action/3.1">
+                    Afinadores
+                  </NavDropdown.Item>
+                </Link>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
                 </NavDropdown.Item>

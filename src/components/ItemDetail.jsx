@@ -43,30 +43,29 @@ const ItemDetail = () => {
             margin: "5rem",
             padding: "1rem",
             textShadow: "0 0 3px #FF0000",
+            maxWidth: "75rem",
           }}
         >
-          <div>
+          <div style={{ textAlign: "center" }}>
             <img
               src={item.pictureUrl1}
-              className="max-w-sm rounded-lg shadow-2xl"
+              style={{ maxWidth: "25%" }}
               alt="instrumento"
             />
-            <div>
+            <div style={{ textAlign: "justify" }}>
               <h1>
                 <strong>
                   {item.instrument} {item.brand}
                 </strong>
                 {item.model}
               </h1>
-              <p style={{ marginRight: "40rem", textAlign: "justify" }}>
-                {item.description}
-              </p>
+              <p style={{ textAlign: "justify" }}>{item.description}</p>
 
               <br />
-              <br />
+
               <ul className="list-disc">
                 <p className="text-xl">CARACTERÍSTICAS</p>
-                <br />
+
                 <li>{item.caracteristica1}</li>
                 <li>{item.caracteristica2}</li>
                 <li>{item.caracteristica3}</li>

@@ -1,19 +1,10 @@
-import { faWeight } from "@fortawesome/free-solid-svg-icons";
 import { Button, Card } from "react-bootstrap";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const styleH1 = {
-  fontSize: 40,
-  color: "#4a54f1",
-  textAlign: "center",
-  paddingTop: "100px",
-  fontWeight: "800",
-};
-
 const ItemCard = ({ data }) => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "18rem", textAlign: "center" }}>
       <Card.Img
         style={{ padding: "2rem" }}
         variant="top"

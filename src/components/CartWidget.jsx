@@ -5,5 +5,4 @@ import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 const CartWidget = () => {
   return <FontAwesomeIcon icon={faCartArrowDown} />;
 };
-
 export default CartWidget;
