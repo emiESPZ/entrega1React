@@ -14,12 +14,12 @@ import {
 } from "firebase/firestore/lite";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC5XNcVA5GDWlgkS0xxV-VCmzg8M9Gzk2o",
-  authDomain: "instrumentosmusicales-c9c50.firebaseapp.com",
-  projectId: "instrumentosmusicales-c9c50",
-  storageBucket: "instrumentosmusicales-c9c50.appspot.com",
-  messagingSenderId: "883938748142",
-  appId: "1:883938748142:web:824c647db4ba4d4966f5ff",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 
 const app = initializeApp(firebaseConfig);
